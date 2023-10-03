@@ -1,13 +1,11 @@
-# signature-generator
+# Signature-generator
 
-[Burleigh Grp Logo](https://raw.githubusercontent.com/It-BurleighGrp/images/main/bgrpLogo.png)
+![Burleigh Grp Logo](https://raw.githubusercontent.com/It-BurleighGrp/images/main/bgrpLogo.png)
 
 ## Hello dear employee!
 ### This is the steps to generate a new signature for your customer, this is the signature that we are supporting at the moment:
 
-
-
-
+- Burleigh Grp
 
 To install dependencies:
 
