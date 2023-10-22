@@ -1,5 +1,6 @@
 import {emailGenerator} from './src/email-generator'
 import Readline from 'readline'
+import { logoBgrp, logoFlockd, logoGid, logoSmb, logoTlc} from './src/images'
 
 let name = ''
 let company = ''
@@ -12,20 +13,22 @@ const readline = Readline.createInterface({
     output: process.stdout,
 })
 
+
 const question1 = () => {
-    return new Promise((resolve) => readline.question("Type the name of the employee: ", nameFunction => {
-            name = nameFunction
-            resolve(nameFunction)
-        })
-    )
-}
-const question2 = () => {
     return new Promise((resolve) => {
         readline.question("Type the name of company that the employee belongs: ", companyFunction => {
             company = companyFunction
             resolve(companyFunction)
         })
     })
+}
+
+const question2 = () => {
+    return new Promise((resolve) => readline.question("Type the name of the employee: ", nameFunction => {
+            name = nameFunction
+            resolve(nameFunction)
+        })
+    )
 }
 const question3 = () => {
     return new Promise((resolve, reject) =>{
@@ -59,9 +62,28 @@ async function main(){
     await question4()
     await question5()
 
-
     readline.close()
-    emailGenerator({company, email, name, phone, role})
+
+    let companyLogo = ''
+
+    switch(company){
+        case 'Burleigh Grp':
+            companyLogo = logoBgrp
+            break
+        case 'Flockd':
+            companyLogo = logoFlockd
+            break
+        case 'ALB':
+            companyLogo = logoSmb
+            break
+        case 'Get it done':
+            companyLogo = logoGid
+            break
+        case 'TLC':
+            companyLogo = logoTlc
+            break
+    }
+    emailGenerator({company, email, name, phone, role, companyLogo})
 }
 
 main()

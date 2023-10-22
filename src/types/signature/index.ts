@@ -4,4 +4,5 @@ export type TSignature = {
     email: string
     phone: string
     company: string
+    companyLogo: string
 }

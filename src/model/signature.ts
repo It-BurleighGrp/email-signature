@@ -1,7 +1,7 @@
 import {TSignature} from '../types'
 
 
-export function signature({email, name, phone, role, company}: TSignature){
+export function signature({email, name, phone, role, company, companyLogo}: TSignature){
     return `<html>
     <table width="445" cellspacing="0" cellpadding="0" border="0">
        <tr>
@@ -16,7 +16,7 @@ export function signature({email, name, phone, role, company}: TSignature){
              <br>
              <br>
              <a style="display:inline-block" href="https://burleighgrp.com">
-             <img style="border:none;" width="132" src="https://raw.githubusercontent.com/It-BurleighGrp/images/main/bgrpLogo.png">
+             <img src="data:image/png;base64,${companyLogo}"/>
              </a>
              <br>
              <br> 
